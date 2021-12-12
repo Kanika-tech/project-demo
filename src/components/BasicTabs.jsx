@@ -42,7 +42,8 @@ function a11yProps(index) {
 
 export default function BasicTabs(props) {
     const { tabData }  = props;
-    const { tab_items } = tabData;
+    const { tab_items, top_level_props = {} } = tabData;
+    const { background = 'transparent' } = top_level_props;
 
   const [value, setValue] = React.useState(0);
 
@@ -52,10 +53,10 @@ export default function BasicTabs(props) {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor: background, color: 'white' }}>
         <Tabs value={value} onChange={handleChange} aria-label="Synoption top level">
            {tab_items.map((tab, index) =>
-             <Tab label={tab.title} {...a11yProps(index)} />
+             <Tab textColor="white" className="text-white" label={tab.title} {...a11yProps(index)} />
             )}
         </Tabs>
       </Box>

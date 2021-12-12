@@ -1,4 +1,7 @@
 export const dashboard = {
+    top_level_props : {
+        background: 'black'
+    },
     tab_items: [
         {
             title: 'Liquidity Provider',
