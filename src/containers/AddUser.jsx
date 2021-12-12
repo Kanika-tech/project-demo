@@ -28,9 +28,6 @@ const CancelButton = styled(Button)(({ theme }) => ({
   BackgroudColor: 'red',
 }));
 
-const InputField = styled(TextField)(({ theme }) => ({
-  border: 'white',
-}));
 
 export default function AddUser(props) {
   const [selectedHedge, setSelectedHedge] = React.useState('');
@@ -46,7 +43,7 @@ export default function AddUser(props) {
         alignItems="center" spacing={2}>
         <Item>
           <Label>LP Family Name</Label>
-          <InputField id="lp-family" variant="outlined" />
+          <input className="InputStyles" id="lp-family" variant="outlined" />
         </Item>
         <Item>
         <Label>Types of Hedges supported</Label>
@@ -55,6 +52,7 @@ export default function AddUser(props) {
           value={selectedHedge}
           label="hedge"
           onChange={handleChange}
+          className="InputStyles"
         >
           <MenuItem value={10}>A</MenuItem>
           <MenuItem value={20}>B</MenuItem>
@@ -63,15 +61,15 @@ export default function AddUser(props) {
         </Item>
         <Item>
           <Label>Abbreivation</Label>
-          <InputField id="Abbreivation" variant="outlined" />
+          <input className="InputStyles" id="Abbreivation" variant="outlined" />
         </Item>
       </Stack>
       <Stack  direction="row"
         justifyContent="center"
         alignItems="center"
-        spacing={4}>
-          <Item> <Button variant="contained" size="medium">Add</Button></Item>
-          <Item>  <CancelButton variant="contained">Cancel</CancelButton></Item> 
+        spacing={4} my={4}>
+          <Item> <Button className="ButtonStyles" variant="contained" size="large">Add</Button></Item>
+          <Item>  <CancelButton className="ButtonStyles bg-red" size="large" variant="contained">Cancel</CancelButton></Item> 
       </Stack>       
       </Box>
   );

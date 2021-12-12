@@ -35,3 +35,20 @@
     transform: rotate(360deg);
   }
 }
+
+.InputStyles {
+  background: transparent;
+  border: 1px solid white;
+  padding: 5px 10px;
+  height: 35px;
+  border-radius: 5px;
+  min-width: 200px;
+}
+.ButtonStyles {
+  width: 200px !important;
+  border-radius: 20px !important; 
+}
+
+.bg-red{
+  background-color: red !important;
+}

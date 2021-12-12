@@ -13,7 +13,8 @@ export const dashboard = {
                         },
                        {
                             title: 'Add',
-                            tabAction: true
+                            tabAction: true,
+                            
                         },
                        {
                             title: 'Edit Name'
